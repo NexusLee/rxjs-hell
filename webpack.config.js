@@ -9,7 +9,8 @@ module.exports = {
   context: ROOT,
   entry: {
     main: "./main/main.ts",
-    chart: "./chart/chart.ts"
+    chart: "./chart/chart.ts",
+    autocomplete: "./autocomplete/autocomplete.ts"
   },
   output: {
     filename: "[name].bundle.js",
@@ -25,6 +26,11 @@ module.exports = {
       filename : 'chart.html',//输出的html路径
       template: 'template/chart.html',
       chunks : ['chart']
+    }),
+    new htmlWebpackPlugin({
+      filename : 'autocomplete.html',//输出的html路径
+      template: 'template/autocomplete.html',
+      chunks : ['autocomplete']
     })
   ],
   resolve: {
