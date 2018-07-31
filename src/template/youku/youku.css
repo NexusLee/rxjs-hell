@@ -1,0 +1,32 @@
+#anchor {
+    height: 360px;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+.video {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    background-color: black;
+}
+.video.video-fixed {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 320px;
+    height: 150px;
+    cursor: all-scroll;
+}
+
+.video.video-fixed .masker {
+    display: none;
+}
+.video.video-fixed:hover .masker {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}

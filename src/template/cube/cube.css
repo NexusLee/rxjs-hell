@@ -1,0 +1,6 @@
+.cube {
+    width: 60px;
+    height: 60px;
+    background-color: #03a9f4;
+    transition: transform 0.5s;
+}
