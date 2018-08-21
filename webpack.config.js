@@ -10,9 +10,11 @@ module.exports = {
   entry: {
     main: "./template/main/main.ts",
     chart: "./template/chart/chart.ts",
-    autocomplete: "./template/autocomplete/autocomplete.ts",
+    autcnocomplete: "./template/autocomplete/autocomplete.ts",
     youku: "./template/youku/youku.ts",
-    cube: "./template/cube/cube.ts"
+    cube: "./template/cube/cube.ts",
+    fileuploader: "./template/fileuploader/app.ts",
+    whotofollow: "./template/whotofollow/whotofollow.ts"
   },
   output: {
     filename: "[name].bundle.js",
@@ -42,6 +44,16 @@ module.exports = {
       filename : 'cube.html',//输出的html路径
       template: 'template/cube/cube.html',
       chunks : ['cube']
+    }),
+    new HtmlWebpackPlugin({
+      filename : 'fileuploader.html',//输出的html路径
+      template: 'template/fileuploader/fileuploader.html',
+      chunks : ['fileuploader']
+    }),
+    new HtmlWebpackPlugin({
+      filename : 'whotofollow.html',//输出的html路径
+      template: 'template/whotofollow/whotofollow.html',
+      chunks : ['whotofollow']
     })
   ],
   resolve: {
