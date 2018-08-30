@@ -35,7 +35,8 @@ let responseStream = requestStream.pipe(
                 return res.ok ? res.json() : Promise.reject(`${res.statusText} ${res.status}`);
             })
         );
-    })
+    }),
+    shareReplay(1)
 );
 
 let suggestion1Stream = close1ClickStream.pipe(
